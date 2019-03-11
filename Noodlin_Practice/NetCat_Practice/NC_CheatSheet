@@ -1,0 +1,10 @@
+NetCat CheatSheet:
+git clone https://github.com/mitre-cyber-academy/2018-Binary-150 //example docker
+	cd 2018-Binary-150
+	docker build -t pwn150 .
+	docker run -d -p 1337  pwn150
+	docker ps //troubleshooting
+	nc localhost <port> //Must use localhost keyword
+nc -lp <port>  //Start a server and listen on said port
+nc <ip> <port> //Connect to the port  "127.0.0.1"=localhost
+nc -v <ip> 1-1000 //Scan for ports within a certain range

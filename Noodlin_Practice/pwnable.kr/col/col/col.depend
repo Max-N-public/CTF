@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1546337887 source:c:\users\^water_bear\desktop\githubprojects\ctf-master\noodlin_practice\pwnable.kr\col\col\main.c
+	<stdio.h>
+	<string.h>
+

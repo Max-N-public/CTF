@@ -1,0 +1,8 @@
+
+
+void main()
+{
+	char* strength;
+	strength = malloc(sizeof(int));
+
+}

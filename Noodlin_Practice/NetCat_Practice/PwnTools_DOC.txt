@@ -1,0 +1,11 @@
+/////Setup
+apt-get update
+apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential
+pip install --upgrade pip
+pip install --upgrade pwntools
+
+/////Cross platform compat.
+apt-get install software-properties-common
+apt-add-repository ppa:pwntools/binutils
+apt-get update
+apt-get install binutils-$ARCH-linux-gnu
