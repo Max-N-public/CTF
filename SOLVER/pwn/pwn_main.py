@@ -1,4 +1,4 @@
-from subprocess import call
+
 
 #/bin/sh shellcode strings
 bin_sh_25 = "\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x31\xc0\x99\x31\xf6\x54\x5f\xb0\x3b\x0f\x05"
@@ -16,10 +16,6 @@ bin_sh_25 = "\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x31\xc0\x9
 0x00
 '''
 
-#run enumeration scripts on a pwn and output to screen
-#add learning if/else struct to determine what the problem type is
-def pwn_enumeration(filename):
-    call('checksec filename')
 
 released = {
 		"iphone" : 2007,

@@ -2,3 +2,5 @@
 pip install pyfiglet
 pip install termcolor
 pip install colorama
+
+apt-get install readelf
