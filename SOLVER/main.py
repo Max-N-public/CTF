@@ -25,7 +25,9 @@ def main_menu():
     if x == 0:
         print("Test1")
     elif x == 1:
-        print("Test2")    
+        print("Test2")
+    elif x == 2:
+        print("main_crypto()")
 
 main_menu()
 
