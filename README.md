@@ -1,4 +1,6 @@
-# CTF_Solver
+# Security_IDE
+<p><b>What I think about this more boldly, how about the functionality can be modular and extended to include things for general infosec for pentesting + other things. I can take all the largest developed projects and put them into "A SINGLE SECURITY IDE"</b></p>
+
 The aim of this project is to provide integrated functionality for solving ctf problems with as little heavy lifting as possible. This service should be able to be easily deployed and act as an easy to use, highly avaible tool. Most ctf problems should be able to be templated and just require critical thinking skills also cutting down on the time required to research common loops and syntax for whatever software, after completing a ctf a ctf writeup template generator will help create html templates. Larger technologies will try to be found while smaller scripts and speciality items will be created in house. I forecast this project will take months, if not a full year. My aim is to complete as much functionality before college as possible.
 
 TODO:
