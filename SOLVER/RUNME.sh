@@ -4,3 +4,5 @@ pip install termcolor
 pip install colorama
 
 apt-get install readelf
+apt-get install gdb-doc
+
