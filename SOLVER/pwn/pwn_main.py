@@ -37,7 +37,7 @@ def ask_for_bin():
         return binary_name
 
 #YO WTF DICTIONARIES DONT OUTPUT IN CORRECT ORDER
-#https://sourceware.org/gdb/current/onlinedocs/gdb/Python-API.html#Python-API
+#https://medium.com/@tarun27sh/python-scripts-for-gdb-9b17ca090ac5
 def print_output(address_list):
     print("Binary info: ELF x86")
     print("|" + "+"*27 + "|")
@@ -57,6 +57,8 @@ def backquotes(cmdwords):
         return output.strip()
 
 stdout = Popen('gdb babypwn', shell=True, stdout=PIPE).stdout
-gdb.r
-output = stdout.read()
-print(output)
+
+gdb.execute()
+
+#output = stdout.read()
+#print(output)
