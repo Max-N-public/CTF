@@ -1,0 +1,21 @@
+web PS
+
+1) Unauthorized user access
+  a) Injections
+    I) SQL
+    II) NOSQL (MongoDB)
+    III) flask / templates
+  b) bruteforcing
+      I) John
+  c) General Issues
+      I) Authentication client side
+2) Unauthorized file access
+  a) LFI
+    I) etc/passwd in webserver --> bad permissions --> relative paths
+  b) RFI
+    I) RCE remote code execution --> do dafaq you want
+3) breaking service
+  a) High variance
+  b) pwn web
+
+
