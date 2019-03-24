@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="cipher_bruteforce.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cipher_Solver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="cipher.css">
+</head>
+
+<!--
+CIPHERS IN USE
+-ROT47 / ROT13
+-Base64
+-Caeser
+-Affine
+-
+-->
+<body>
+    <h1 class="center">Cipher Solver</h1>
+
+    <div class="right_padding">
+        <form id="form" onsubmit="return false;">
+            Input: <input type="text" id="userInput"/>
+                   <input type="button" value="submit" onClick="decodeCipher(userInput)"</input>
+        <hr>
+    </div>
+    </form>
+</body>
+
+</html>
+

@@ -1,0 +1,29 @@
+.center {
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+  }
+
+.right_padding {
+    padding: 20px;
+}
+
+form {
+    padding: 0px;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+
+input {
+    font-size: 20px;
+    width: 75%;
+    margin: 5px 10px 5px 10px;
+}
+
+hr {
+    border-radius: 2px;
+    border: 2px solid black;
+    margin-top: 30px;
+    margin-top: 30px;
+}
