@@ -9,3 +9,8 @@ pip install pexpect
 apt-get install readelf
 apt-get install gdb-doc
 
+
+#download ghidra
+wget "ghidra_9.0_PUBLIC_20190228.zip" -O /pwn/Programs/
+
+#update github script repos
