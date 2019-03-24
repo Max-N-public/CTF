@@ -1,7 +1,7 @@
 function decodeCipher(input)
 {
-    var encoded = window.atob(input);
-    var decoded = window.btoa(input);
+    //var encoded = window.btoa(input);
+    //var decoded = window.atob(input);
 
-    var.console(encoded)
+    document.getElementById("output_base64").innerHTML = 5 + 6;
 }
