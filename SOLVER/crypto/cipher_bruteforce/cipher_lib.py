@@ -3,11 +3,17 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def cipher_lib():
-    return "hello world"
+    return """Form decoding Schemes:
+    <br>Caesar Cipher
+    <br>Affine
+    <br>Rail Fence
+    <br>ROT47
+    <br>ROT13
+    <br>etc"""
 
-@app.route('/call_decoders')
+@app.route('/admin_panel')
 def main():
-    return 'text'
+    return '<br><br><br><br><br><b>yur mum, gai<br><br><br>rekt</b>'
 
 '''def base64_decode(input):
 {
