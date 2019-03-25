@@ -5,6 +5,8 @@
 		<th>1) Develop as a command line tool</th>
 		<th>2) Develop with website interface : LOCALLY ONLY</th>
 		<th>3) Implement frontend and backend functionality --> requires splitting up what is made currently into 2 parts</th>
+	</tr>
+</table>
 
 
 <p><b>What I think about this more boldly, how about the functionality can be modular and extended to include things for general infosec for pentesting + other things. I can take all the largest developed projects and put them into "A SINGLE SECURITY IDE"</b></p>
