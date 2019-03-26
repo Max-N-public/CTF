@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 import base64
-
+from pprint import pprint
 
 
 @app.route('/ciphers', methods=['GET'])
@@ -58,7 +58,8 @@ ROT Block-------------------------------------
 def rot47(input):
     return "test"
 
-def rot13(input)
+def rot13(input):
+    return pprint(['ymj vznhp gwtbs ktc ozruji tajw ymj qfed itl'.decode('rot%d' % i) for i in range(1,26)])
 
 #---------------------------------------------
 
