@@ -22,11 +22,20 @@ CIPHERS IN USE
     <h1 class="center">Cipher Solver</h1>
 
     <div class="right_padding">
-        <form action="http://localhost:8000/cipher_main" id="form" onsubmit="return false;">
+        <form action="http://localhost:8000/cipher_lib" id="form" onsubmit="return false;">
             Input: <input type="text" id="userInput">
-                   <input type="submit" value="submit" onClick="loadDecoders(userInput)">
-    </form>
+                   <input type="submit">
+        </form>
     <hr>
+    
+    <table border = 1>
+        {% for key, value in result.items() %}
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+            </tr>
+        {% endfor %}
+    </table>
     </div>
 </body>
 

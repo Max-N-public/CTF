@@ -1,19 +1,23 @@
-function decodeCipher(input)
+function decodeCiphers(input)
 {
-    //var encoded = window.btoa(input);
-    //var decoded = window.atob(input);
-
-    //Function call list
-    decodeBase64(input)
-
-    runRot(input)
-    rot47(input)
-    runCaesar(input)
+    //Ajax call
+    //Allows python scripts to interact with the webpage
+    var xhttp = new XMLHttpRequest();
     
-}
+    //There are two functions to call from the xhttp object
+    //xhttp.open("method", "url", "sync or async")
+    xhttp.open("GET", "cipher_lib.py?text=" + input, true);
+    xhttp.responseType = "text";
 
-function decodeBase64(input)
-{
-    document.getElementById("output_base64").innerHTML = 5 + 6;
+    //function call list
+    xhttp.onload = function(e)
+    {
+        var base64_decoded = text.base64decode(xhttp.response);
+        console.log(base64decode);
+    }
+
+
+    xhttp.send();
+    
 }
 
