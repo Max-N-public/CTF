@@ -36,6 +36,9 @@ def cipher_lib(input):
     #)
     return "test"
 
+'''
+HEXBASE BLOCK----------------------------
+'''
 def base64_decode(input):
     return base64.b64decode(input)
 
@@ -44,6 +47,15 @@ def base32_decode(input):
 
 def base16_decode(input):
     return base64.b16decode(input)
+
+def base64_encode(input):
+    return base64.b64encode(input)
+
+def base32_encode(input):
+    return base64.b32encode(input)
+
+def base16_encode(input):
+    return base64.b16encode(input)
 
 def rot47(input):
     return "test"
