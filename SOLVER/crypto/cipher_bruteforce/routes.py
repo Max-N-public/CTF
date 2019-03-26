@@ -57,7 +57,10 @@ ROT Block-------------------------------------
 '''
 def rot47(input):
     rot47_array = []
-    return rot47_array.append([(str(33 + ((ord(j) + 14) mod 94))) for j in range(33,126)])
+    for char in input:
+        if(ord(char) >= 33 && ord(char) <= 126 == True):
+            rot47_array.append(chr(33 + ((ord(j) + 14) mod 94))
+    return rot47_array
 
 def rot26(input):
     rot26_array = []
@@ -65,8 +68,6 @@ def rot26(input):
 
 #---------------------------------------------
 
-def runRot(input):
-    return "aasd"
-
 def runCaesar(input):
-    return "asd"
+    caesar_array = []
+    return caesar_array.append()
