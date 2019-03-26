@@ -11,7 +11,7 @@ def cipher_lib(input):
     Call list for ciphers: (Only has really common ciphers --> use cyberchef for more rare)
     base64/32/16
     ROT47
-    ROT13
+    ROT26
     Caeser Cipher
     Morse
     QuipQuip
@@ -20,7 +20,7 @@ def cipher_lib(input):
     '''
     base64_decoded = base64(input)
     rot47_decoded = rot47(input)
-    rot13_decoded = rot13(input)
+    rot26_decoded = rot26(input)
     caesar_decoded = caesar(input)
     morse_decoded = morse(input)
     quipquip_decoded = quipquip(input)
@@ -56,10 +56,12 @@ def base16_encode(input):
 ROT Block-------------------------------------
 '''
 def rot47(input):
-    return "test"
+    rot47_array = []
+    return rot47_array.append([(str(33 + ((ord(j) + 14) mod 94))) for j in range(33,126)])
 
-def rot13(input):
-    return pprint(['ymj vznhp gwtbs ktc ozruji tajw ymj qfed itl'.decode('rot%d' % i) for i in range(1,26)])
+def rot26(input):
+    rot26_array = []
+    return rot_array26.append(['input'.decode('rot%d' % i) for i in range(1,26)])
 
 #---------------------------------------------
 
