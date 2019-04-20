@@ -139,3 +139,19 @@ Folder will look like
 	Programming
 		i dunno
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+TODO organize later 
+https://www.pwndiary.com
+make solver for revs
+ie a brute forcer
+create gdb cheatsheet for ctfs
+		
