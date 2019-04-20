@@ -151,6 +151,8 @@ Folder will look like
 		
 TODO organize later 
 https://www.pwndiary.com
+https://mmishou.wordpress.com/tutorials/
+liveoverflow practice
 make solver for revs
 ie a brute forcer
 create gdb cheatsheet for ctfs
