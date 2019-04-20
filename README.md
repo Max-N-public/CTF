@@ -151,6 +151,7 @@ Folder will look like
 		
 TODO organize later 
 https://www.pwndiary.com
+rpi modules
 https://mmishou.wordpress.com/tutorials/
 liveoverflow practice
 make solver for revs
