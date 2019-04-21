@@ -200,4 +200,6 @@ voltron
 start gdb in diff versions of python
 gdb --args python2 or python3
 
+http://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html
+
 		
