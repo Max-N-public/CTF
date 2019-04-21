@@ -150,6 +150,7 @@ Folder will look like
 		
 		
 TODO organize later 
+create pwntools template --> make an os with the ctf template project prestalled along with dependancies and apps
 https://github.com/nnamon/linux-exploitation-course
 add pwn notes to command line
 learn z3 and do pico
