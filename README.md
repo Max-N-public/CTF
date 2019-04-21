@@ -150,6 +150,7 @@ Folder will look like
 		
 		
 TODO organize later 
+learn z3 and do pico
 https://tuonilabs.wordpress.com --> really good writeups
 https://ropemporium.com/ --> pwnable.kr --> reversing.kr
 https://github.com/Naetw/CTF-pwn-tips
