@@ -150,6 +150,8 @@ Folder will look like
 		
 		
 TODO organize later 
+https://github.com/nnamon/linux-exploitation-course
+add pwn notes to command line
 learn z3 and do pico
 https://tuonilabs.wordpress.com --> really good writeups
 https://ropemporium.com/ --> pwnable.kr --> reversing.kr
