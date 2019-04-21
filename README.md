@@ -166,4 +166,38 @@ liveoverflow practice
 make solver for revs
 ie a brute forcer
 create gdb cheatsheet for ctfs
+	pattern_create 400 in.txt
+	x/wx $rsp
+	pattern_offset 0x41413741
+	https://stackoverflow.com/questions/11506799/stack-resident-buffer-overflow-on-64-bit
+	https://bytesoverbombs.io/exploiting-a-64-bit-buffer-overflow-469e8b500f10
+
+echo ‘while true; do nc -vv -l -p 4444 -e ./ropasaurusrex; done’ > start.sh
+bash start.sh
+
+nm -D /lib/i386-linux-gnu/libc.so.6 | grep system
+nm -D ./libc.so.6 | grep system
+ldd ./ropasaurusrex
+readelf -l ropasaurusrex
+objdump -R ropasaurusrex
+ROPgadget –binary ropasaurusrex –only “pop|ret”
+
+inding the libc /bin/sh:
+strings -tx libc.so.6 | grep “/bin/sh”
+
+x64 --> rdi, rsi, rdx, rcx, r8, r9
+x32 --> eax, ebx, ecx, edx, esi, edi, ebp
+https://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64
+
+gdb --command script.py ./executable.elf
+(gdb) source script.py
+
+use gdb with
+pwndbg
+peda
+voltron
+
+start gdb in diff versions of python
+gdb --args python2 or python3
+
 		
