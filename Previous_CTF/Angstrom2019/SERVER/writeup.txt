@@ -1,0 +1,5 @@
+NOTES
+I dont even know how to start this
+what are syscalls?
+also get better at unpacking / packing executables
+also the other rev how do you do the image thing
