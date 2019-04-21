@@ -151,6 +151,7 @@ Folder will look like
 		
 TODO organize later 
 https://tuonilabs.wordpress.com --> really good writeups
+https://github.com/Naetw/CTF-pwn-tips
 https://www.youtube.com/watch?v=NWPL5odSuLM
 https://www.youtube.com/watch?v=5FJxC59hMRY
 https://www.pwndiary.com
