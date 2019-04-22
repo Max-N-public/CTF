@@ -16,6 +16,11 @@ for each
     L #print char in Reg3
     S #increment Reg4
 
+Use 
+python -c 'print "GCLS"*28'
+to do quicker
+
+
 wiki here https://esolangs.org/wiki/AlphaBeta
 sourecode was the best to understand how it worked
 --> https://github.com/TryItOnline/alphabeta/blob/master/AB.cpp
