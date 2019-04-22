@@ -1,0 +1,25 @@
+Load from memory
+G --> Reg1 = Memory[Reg4[0]]
+
+Print to screen
+L --> cout << char(Reg3)
+
+Load for reg to stout
+C --> Reg3 = Reg1
+
+i++
+S --> increment Reg4
+
+for each
+    G #load Reg4[index] into Reg1
+    C #load reg1 into reg3
+    L #print char in Reg3
+    S #increment Reg4
+
+wiki here https://esolangs.org/wiki/AlphaBeta
+sourecode was the best to understand how it worked
+--> https://github.com/TryItOnline/alphabeta/blob/master/AB.cpp
+
+actf{esolangs_sure_are_fun!}
+
+
