@@ -154,6 +154,8 @@ create pwntools template --> make an os with the ctf template project prestalled
 https://github.com/nnamon/linux-exploitation-course
 add pwn notes to command line
 learn z3 and do pico
+https://david942j.blogspot.com
+https://github.com/TechSecCTF/CTF-pwn-tips/wiki/Pwn-Tips
 https://tuonilabs.wordpress.com --> really good writeups
 https://ropemporium.com/ --> pwnable.kr --> reversing.kr
 https://github.com/Naetw/CTF-pwn-tips
