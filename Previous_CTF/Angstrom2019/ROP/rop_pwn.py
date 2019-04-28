@@ -7,7 +7,6 @@ import time
 
 '''
 Final questions
-What are the different ROP gadgets for?
 how do you attach pwntools to gdb?
 '''
 
