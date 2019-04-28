@@ -1,0 +1,43 @@
+Imports
+    from ptrlib import *
+    from pwn import *
+    import time
+
+
+Establish conn
+    conn = remote('shell.actf.co', 19400)
+    conn = process('./chain_of_rope')
+
+Create env
+    context.terminal = 'bash'
+    context.log_level = 'debug'
+    context.arch = 'amd64 / i386'
+
+
+Wait    
+    time.sleep(2)
+    conn.sendline('1')
+
+syscall_num = 59 # sys_execve
+
+
+Event handlers
+    Pick out a string from the middle of a chunk of text
+        sock.recvuntil("We didn't sell you a ")
+        addr_libc_start_main = int(sock.recvuntil(".").rstrip(b"."), 16)
+
+
+
+
+
+
+pack addresses using 
+    p64()
+    p32()
+    p16()
+
+Grab function addresses
+    p64(elf.symbol("flag"))
+
+Interact and view stdout
+    conn.interactive()
