@@ -1,0 +1,6 @@
+z3
+patching binaries
+learn rev
+learn pwn
+learn image manipulation
+getting past anti debugging
