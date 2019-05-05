@@ -1,5 +1,15 @@
 
 '''
+i sh
+examine the address space of loaded libraries
+Search memory for address within this space and comapre to libc
+NOW YOU KNOW THE OFFSET AMEN
+'''
+
+
+
+
+'''
 https://sploitfun.wordpress.com <--- GOOD SHIT
 '''
 

