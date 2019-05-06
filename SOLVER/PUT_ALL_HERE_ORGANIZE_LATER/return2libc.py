@@ -13,7 +13,8 @@ USED ON NX
 
 ANATOMY:
 
-[Fill the stack frame][Fill ebp with 4 bytes][address of system()][address of exit()][address of "/bin/sh" string]
+x32 --> [Fill the stack frame][Fill ebp with 4 bytes][address of system()][address of exit()][address of "/bin/sh" string]
+x64 --? [fill the stack frame][fill ebp with 8 bytes][pop ret gadget][addr of /bin/sh][addr of system]
 
 !!If you cant isolate the "/bin/sh" string using the addresses
 0xbffffe4a: "EGG=/bin/sh"

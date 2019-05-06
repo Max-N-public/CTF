@@ -3,8 +3,33 @@
 i sh
 examine the address space of loaded libraries
 Search memory for address within this space and comapre to libc
+possible with read call and puts combined
 NOW YOU KNOW THE OFFSET AMEN
 '''
+
+'''
+canary
+ebp
+eip
+'''
+
+'''
+b = 1
+Bytes.
+h = 2
+Halfwords (two bytes).
+w = 4 --> 32 bit
+Words (four bytes). This is the initial default.
+g = 8 --> 64 bit
+Giant words (eight bytes).
+
+#!!!looking at arguments you can tell where the read buffer is stored
+#--->I.E. in mov rsi, rax then its in rsi
+'''
+'''
+libc_base = leak - libc_offset
+'''
+
 
 
 
