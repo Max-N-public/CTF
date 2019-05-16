@@ -153,6 +153,7 @@ TODO organize later
 create pwntools template --> make an os with the ctf template project prestalled along with dependancies and apps
 https://github.com/nnamon/linux-exploitation-course
 add pwn notes to command line
+https://exploit.education/phoenix/stack-one/
 learn z3 and do pico
 https://david942j.blogspot.com
 https://github.com/TechSecCTF/CTF-pwn-tips/wiki/Pwn-Tips
