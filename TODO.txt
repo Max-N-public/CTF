@@ -1,0 +1,12 @@
+Club TODO
+    - Make Ghidra portal
+    - Make ftp server portal
+    - Make online browser sandbox portal
+    - g00df00d ctf
+
+Repo TODO
+    - organize files
+    - setup vm and docker files
+        - ghidra stuff
+    - yuawn, rpi slides, csaw, heap, setup docker, setup ctf repo
+        - add learn list
