@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Raspbian WiFi Configuration Portal</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Toggle CSS -->
+    <link href="vendor/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/custom.css" title="main" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="/dist/icons/favicon.png?ver=2.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/dist/icons/favicon.png" />
+    <link rel="manifest" href="/dist/icons/site.webmanifest">
+    <link rel="mask-icon" href="/dist/icons/safari-pinned-tab.svg" color="#b91d47">
+    <meta name="msapplication-config" content="/dist/icons/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand" href="index.php">RaspAP Wifi Portal v1.5.1</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <!-- Navigation -->
+        <div class="navbar-default sidebar" role="navigation">
+          <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+              <li>
+                <a href="index.php?page=wlan0_info"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+              </li>
+                          <li>
+                <a href="index.php?page=wpa_conf"><i class="fa fa-wifi fa-fw"></i> Configure WiFi client</a>
+          </li>
+                                              <li>
+                <a href="index.php?page=hostapd_conf"><i class="fa fa-dot-circle-o fa-fw"></i> Configure hotspot</a>
+              </li>
+                                              <li>
+                 <a href="index.php?page=network_conf"><i class="fa fa-sitemap fa-fw"></i> Configure networking</a>
+              </li> 
+                                              <li>
+                <a href="index.php?page=dhcpd_conf"><i class="fa fa-exchange fa-fw"></i> Configure DHCP Server</a>
+              </li>
+                                                                              <li>
+                <a href="index.php?page=auth_conf"><i class="fa fa-lock fa-fw"></i> Configure Auth</a>
+              </li>
+                                              <li>
+                <a href="index.php?page=theme_conf"><i class="fa fa-wrench fa-fw"></i> Change Theme</a>
+              </li>
+                                              <li>
+                <a href="index.php?page=data_use"><i class="fa fa-bar-chart fa-fw"></i> Data usage</a>
+              </li>
+                              <li>
+                <a href="index.php?page=system_info"><i class="fa fa-cube fa-fw"></i> System</a>
+              </li>
+               <li>
+                <a href="index.php?page=about"><i class="fa fa-info-circle fa-fw"></i> About RaspAP</a>
+              </li>
+           </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.navbar-default -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <!-- Page Heading -->
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="page-header">
+              <img class="logo" src="img/raspAP-logo.png" width="45" height="45">RaspAP
+            </h1>
+          </div>
+        </div><!-- /.row -->
+
+            <div class="row">
+      <div class="col-lg-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><i class="fa fa-dashboard fa-fw"></i> Dashboard</div>
+              <div class="panel-body">
+                <p><div class="alert alert-success alert-dismissable">Interface is up.<button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button></div></p>
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <h4>Interface Information</h4>
+                              <div class="info-item">Interface Name</div> wlan0<br />
+                              <div class="info-item">IPv4 Address</div> 10.3.141.1<br />
+                              <div class="info-item">Subnet Mask</div> 255.255.255.0<br />
+                              <div class="info-item">IPv6 Address</div> fe80::733b:df19:8a3e:7f89<br />
+                              <div class="info-item">Mac Address</div> b8:27:eb:48:6a:67<br /><br />
+                          </div><!-- /.panel-body -->
+                        </div><!-- /.panel-default -->
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <h4>Interface Statistics</h4>
+                              <div class="info-item">Received Packets</div> 0<br />
+                              <div class="info-item">Received Bytes</div> 0<br /><br />
+                              <div class="info-item">Transferred Packets</div> 42<br />
+                              <div class="info-item">Transferred Bytes</div> 5714 (5.58 KB)<br />
+                          </div><!-- /.panel-body -->
+                        </div><!-- /.panel-default -->
+                        </div><!-- /.col-md-6 -->
+                      <div class="col-md-6">
+                        <div class="panel panel-default">
+                          <div class="panel-body wireless">
+                            <h4>Wireless Information</h4>
+                              <div class="info-item">Connected To</div> Not connected<br />
+                              <div class="info-item">AP Mac Address</div> <br />
+                              <div class="info-item">Bitrate</div> <br />
+                              <div class="info-item">Signal Level</div> <br />
+                              <div class="info-item">Transmit Power</div> 31.00 dBm<br />
+                              <div class="info-item">Frequency</div>  MHz<br /><br />
+                              <div class="info-item">Link Quality</div>
+                                <div class="progress">
+                                <div class="progress-bar progress-bar-info progress-bar-striped active"
+                                  role="progressbar"
+                                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                                  style="width: 0%;">0%
+                                </div>
+                              </div>
+                          </div><!-- /.panel-body -->
+                        </div><!-- /.panel-default -->
+                        <div class="panel panel-default">
+                          <div class="panel-body wireless">
+                            <h4>Connected Devices</h4>
+                            <div class="table-responsive">
+                              <table class="table table-hover">
+                                <thead>
+                                  <tr>
+                                    <th>Host name</th>
+                                    <th>IP Address</th>
+                                    <th>MAC Address</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                              </table>
+                            </div><!-- /.table-responsive -->
+                          </div><!-- /.panel-body -->
+                        </div><!-- /.panel-default -->
+                      </div><!-- /.col-md-6 -->
+                    </div><!-- /.row -->
+
+                 <div class="col-lg-12">
+                 <div class="row">
+                    <form action="?page=wlan0_info" method="POST">
+                    <input type="submit" class="btn btn-warning" value="Stop wlan0"  name="ifdown_wlan0" />              <input type="button" class="btn btn-outline btn-primary" value="Refresh" onclick="document.location.reload(true)" />
+              </form>
+            </div>
+              </div>
+
+                </div><!-- /.panel-body -->
+                <div class="panel-footer">Information provided by ip and iw and from system.</div>
+            </div><!-- /.panel-default -->
+        </div><!-- /.col-lg-12 -->
+    </div><!-- /.row -->
+          </div><!-- /#page-wrapper --> 
+    </div><!-- /#wrapper -->
+
+    <!-- RaspAP JavaScript -->
+    <script src="dist/js/functions.js"></script>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Toggle JavaScript -->
+    <script src="vendor/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+
+    <!-- Custom RaspAP JS -->
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>

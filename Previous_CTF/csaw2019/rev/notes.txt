@@ -1,0 +1,95 @@
+AAAAAAAAAAAAAAAA
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+CCCCCCC
+
+x/w
+0x00000000004008f7
+0x000000000040092a
+
+
+%x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x AAAA
+
+
+							     0x6a
+   0x0000000000000b91 <+66>:    mov    DWORD PTR [rbp-0x14c],0x35
+   0x0000000000000b9b <+76>:    mov    DWORD PTR [rbp-0x148],0x6a
+   0x0000000000000ba5 <+86>:    mov    DWORD PTR [rbp-0x144],0x6f
+   0x0000000000000baf <+96>:    mov    DWORD PTR [rbp-0x140],0x75
+   0x0000000000000bb9 <+106>:   mov    DWORD PTR [rbp-0x13c],0x75
+   0x0000000000000bc3 <+116>:   mov    DWORD PTR [rbp-0x138],0x69
+   0x0000000000000bcd <+126>:   mov    DWORD PTR [rbp-0x134],0x34
+   0x0000000000000bd7 <+136>:   mov    DWORD PTR [rbp-0x130],0x64
+   0x0000000000000be1 <+146>:   mov    DWORD PTR [rbp-0x12c],0x41
+   0x0000000000000beb <+156>:   mov    DWORD PTR [rbp-0x128],0x75
+   0x0000000000000bf5 <+166>:   mov    DWORD PTR [rbp-0x124],0x7a
+   0x0000000000000bff <+176>:   mov    DWORD PTR [rbp-0x120],0x35
+   0x0000000000000c09 <+186>:   mov    DWORD PTR [rbp-0x11c],0x6d
+   0x0000000000000c13 <+196>:   mov    DWORD PTR [rbp-0x118],0x6d
+   0x0000000000000c1d <+206>:   mov    DWORD PTR [rbp-0x114],0x74
+   0x0000000000000c27 <+216>:   mov    DWORD PTR [rbp-0x110],0x62
+   0x0000000000000c31 <+226>:   mov    DWORD PTR [rbp-0x10c],0x78
+   0x0000000000000c3b <+236>:   mov    DWORD PTR [rbp-0x108],0x7a
+   0x0000000000000c45 <+246>:   mov    DWORD PTR [rbp-0x104],0x34
+   0x0000000000000c4f <+256>:   mov    DWORD PTR [rbp-0x100],0x74
+   0x0000000000000c59 <+266>:   mov    DWORD PTR [rbp-0xfc],0x75
+   0x0000000000000c63 <+276>:   mov    DWORD PTR [rbp-0xf8],0x34
+   0x0000000000000c6d <+286>:   mov    DWORD PTR [rbp-0xf4],0x73
+   0x0000000000000c77 <+296>:   mov    DWORD PTR [rbp-0xf0],0x65
+   0x0000000000000c81 <+306>:   mov    DWORD PTR [rbp-0xec],0x41
+   0x0000000000000c8b <+316>:   mov    DWORD PTR [rbp-0xe8],0x7a
+   0x0000000000000c95 <+326>:   mov    DWORD PTR [rbp-0xe4],0xb
+   0x0000000000000c9f <+336>:   mov    DWORD PTR [rbp-0xe0],0x63
+   0x0000000000000ca9 <+346>:   mov    DWORD PTR [rbp-0xdc],0x70
+   0x0000000000000cb3 <+356>:   mov    DWORD PTR [rbp-0xd8],0x68
+   0x0000000000000cbd <+366>:   mov    DWORD PTR [rbp-0xd4],0x63
+   0x0000000000000cc7 <+376>:   mov    DWORD PTR [rbp-0xd0],0x81
+   0x0000000000000cd1 <+386>:   mov    DWORD PTR [rbp-0xcc],0x73
+   0x0000000000000cdb <+396>:   mov    DWORD PTR [rbp-0xc8],0x6e
+   0x0000000000000ce5 <+406>:   mov    DWORD PTR [rbp-0xc4],0x6b
+   0x0000000000000cef <+416>:   mov    DWORD PTR [rbp-0xc0],0x50
+   0x0000000000000cf9 <+426>:   mov    DWORD PTR [rbp-0xbc],0x56
+   0x0000000000000d03 <+436>:   mov    DWORD PTR [rbp-0xb8],0x57
+   0x0000000000000d0d <+446>:   mov    DWORD PTR [rbp-0xb4],0x68
+   0x82
+   0x76
+   0x52
+   0x53
+   0x4e
+   0x53
+   0x72
+   0x51
+   0x53
+   0x54
+   0x54
+   0x53
+   0x53
+   0x71
+   0x6b
+   0x82
+   0x56
+   0x81
+   0x73
+   0x78
+   0x5b
+   0x63
+   0x41
+   0x2a
+
+
+
+
+abcdefg
+a
+abcd
+gfff->&->\x9
+j
+
+
+
+
+
+precis
+linear textbook
+ctf
